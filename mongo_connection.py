@@ -6,12 +6,13 @@ load_dotenv(override=True) # haetaan ensisijaisesti .env -tiedostosta, sitten va
 
 def connect():
     try:                        
-        client = MongoClient('connection_stringisi tähän') ### LISÄÄ CONNECTION STRINGISI,
-                                                           ### HAE SALASANASI .env -TIEDOSTOSTA)
+        client = MongoClient("mongodb+srv://oilikalm:mongokokeilu@cluster0.jfqoq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") ### LISÄÄ CONNECTION STRINGISI,
+                                                         ### HAE SALASANASI .env -TIEDOSTOSTA)
         print("connected to mongo")
         return client
     except:
         print("connection error")
+# connect()
 
 def fetch_new_id(coll):
     ### FUNKTION TULEE PALAUTTAA UUSI id, JOTA KANNASSA EI VIELÄ OLE.
